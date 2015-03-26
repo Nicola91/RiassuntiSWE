@@ -2,7 +2,7 @@ latex=pdflatex -synctex=1 -interaction=nonstopmode
 # aspell=sudo aspell --mode=tex --lang=it check
 
 compile: 
-	$(latex) lezione1.tex && $(latex) lezione1.tex
+	$(latex) Processi_software.tex && $(latex) Processi_software.tex
 	rm -rf *.aux 
 	rm -rf *.log
 	rm -rf *.out
@@ -12,7 +12,7 @@ compile:
 	rm -rf *.lot
 
 compilenoopen:
-	$(latex) lezione1.tex && $(latex) lezione1.tex
+	$(latex) Processi_software.tex && $(latex) Processi_software.tex
 	rm -rf *.aux 
 	rm -rf *.log
 	rm -rf *.out
