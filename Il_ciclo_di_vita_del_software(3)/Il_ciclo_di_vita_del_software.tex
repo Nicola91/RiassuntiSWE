@@ -17,7 +17,7 @@
 
 \end{itemize}
 
-\textbf{Fase}:\fbox{\textbf{Def}Periodo di tempo contiguo che cattura transizioni o segmenti di ciclo di vita}
+\textbf{Fase}:\fbox{\textbf{Def} Periodo di tempo contiguo che cattura transizioni o segmenti di ciclo di vita}
 
 La scelta del ciclo di vita pone vincoli sulla pianificazione del progetto, è indipendente da metodi e strumenti di sviluppo.\\
 
@@ -44,26 +44,62 @@ Tipi di ciclo di vita:
 		\\
 		I quadrati rappresentano dei macrostati.
 		\item \textbf{Componenti:} si basa sul riuso dei componenti già fatti, utilizzo meno risorse ed ho un ecosistema(librerie e strumenti) già pronti.
+	\item \textbf{Metodi Agili:} basati su 4 principi fondamentali:
+	\begin{enumerate}
+
+		\item Mettere in primo piano persone e iterazioni piuttosto che processi e strumenti. Gli individui sono importanti ed è importante il modo in cui interagiscono tra loro;
+	
+		\item ciò  che importa e che il sw funzioni non la documentazione;
+	
+		\item Avere un buon rapporto con il customer, coinvolgerlo;
+	
+		\item Reattività piuttosto che pianificazione. Capacità di adattamento a cambiamenti delle situazioni.
+
+	\end{enumerate}
+	L'idea base e di costruire degli user story che sono definiti da
+		\begin{itemize}
+			\item Un documento di descrizione;
+			\item La minuta della conversazione con il cliente;
+			\item Piano dei test per confermare che la strategia funziona.
+		\end{itemize}
+	Questi tipi di metodi permettono dunque di dimostrare costantemente ciò che e stato fatto, verificare l'avanzamento tramite progresso reale, assicurare che l'intero prodotto sw è ben verificato e integrato.
+	\textbf{Scrum}, \textbf{Kanban} e \textbf{Scrumban} sono degli esempi.
 \end{itemize}
+\textbf{Scrum:} regole interne molte collaborative. Ci sono 3 tipi di fase:
+	 \begin{itemize}
+	 		\item Backlog: "le cose da fare", requisiti e funzionalità del prodotto;
+	 		\item Spirit Backlog: insieme di storie del prossimo spirit
+	 		\item Spirit: fase operativa di sviluppo, durata 2-4 settimane, alla fine abbiamo un prodotto potenzialmente vendibile.
+	 \end{itemize}
+Ad ogni periodo di tempo si prendono le cose più necessarie e si esegue uno spirit, non appena è terminatose manca qualcosa si ritorna al backlog aggiungendo \textit{to do}. Questo ciclo di vita e iterativo in quanto non ho un numero casuale di spirit e questi producono quasi sempre un avanzamento.
 
-\textbf{Metodi agili}, opposizione al modello sequenziale. 4 principi su cui si basa:
-
-\begin{enumerate}
-
-	\item Mettere in primo piano persone e iterazioni piuttosto che processi e strumenti. Gli individui sono importanti ed è importante il modo in cui interagiscono tra loro;
+\textbf{SEMAT:} \\
+\includegraphics[width=0.5\columnwidth]{img6}\\
+I \textit{Requirements} hanno 6 aggettivi:
+\begin{itemize}
+	\item \textbf{Conceived:} i requisiti vanno concepiti, nascono nel luogo dove stanno gli stakeholder, ovvero tutti coloro che danno forma ad un prodotto. Non significa "\textit{completamente formato}", i requisiti vanno fatti emergere;
+	\item \textbf{Bounded:} so cosa voglio/non voglio requisiti ben definiti;
+	\item \textbf{Coherent:} elenco dei bisogni che ho trovato, anche qui gli stakeholder sono gli interlocutori;
+	\item \textbf{Acceptable:}designa lo stato di maturità e dice che i requisiti sono ragionevoli per tutti;
+	\item \textbf{Addressed:} ho la soluzione per i requisiti marcati come \textit{Acceptable}, sono capace di dimostrare che soddisfo i requisiti questo va dimostrato nella progettazione;
+	\item \textbf{Fullfilled}, "\textit{compiere}". Ho un prodotto che fa esattamente ciò che mi aspettavo.	\end{itemize}
 	
-	\item "\textit{Dei documenti me ne frego, basta che funzioni}". La documentazione non sempre corrisponde a sw funzionante. E' importante che funzioni. Ma nel lungo periodo farà soffrire chi dovrà prendere in mano il sw;
-	
-	\item Avere un buon rapporto con il customer, coinvolgerlo, non ingessare il rapporto;
-	
-	\item Reattività piuttosto che pianificazione. Capacità di adattamento a cambiamenti delle situazioni.
-
-\end{enumerate}
-
-Il modello agile è maturato in qualcosa di plausibile, in alcune tecniche che funzionano.
-
-\textbf{Modello agile educato}, tutto ruota intorno al "\textit{document user story}", è l'espressione precisa di quello che l'utente vuole in quel momento. Associato ad ogni user story produrre una strategia che sia in grado di soddisfare quei bisogni. User story associato a un insieme di cose da fare che dimostrino al customer che c'è una soluzione (\textbf{product backlog}). Quello che si ottiene va verso il customer o in feedback. C'è un supervisore che decide l'urgenza strategica (\textbf{sprint}). Tutti fanno un pezzo e poi lo consegnano. Ogni iterazione è rapida e va molto verso le aspettative del cliente.
-
-\textbf{Scrum daily}, mucchio giornaliero, un contatto giornaliero dell'avanzamento. Tecnica ragionevole per chi ha poca esperienza.
-
+\includegraphics[width=0.5\columnwidth]{img7}\\
+Anche il \textit{Work} \textit{le cose da fare} hanno degli stadi ben predefiniti:
+\begin{itemize}
+	\item \textbf{Initiated:} avere un piano di lavoro;
+	\item \textbf{Prepared:} avere un calendario;
+	\item \textbf{Started:} partire;
+	\item \textbf{Under Control:} sappiamo dove siamo;
+	\item \textbf{Concluded:} possiamo dire di aver finito;
+	\item \textbf{Close:} risposta degli stakeholders \textit{"va bene"}.
+\end{itemize}
+Il \textit{Team} deve essere:
+\begin{itemize}
+	\item \textbf{Seeded:} si comincia a identificare di chi ho bisogno, non come persone ma come competenze. Dobbiamo spersonalizzare, importa il ruolo che ho. Nessuno è un fuoriclasse (perché il fuoriclasse non è disciplinato e sistematico, quindi dannoso), anche se in una buona organizzazione può aiutare (altrimenti fa danno);
+	\item \textbf{Formed:} le persone ce le ho e posso lavorare; istituisco dunque tecniche e strumenti per collaborare;
+	\item \textbf{Collaborating:} le forme di collaborazione vanno studiate per evitare perdite di tempo;
+	\item \textbf{Performed:} una volta acquisite le tecniche siamo efficienti ed efficaci;
+	\item \textbf{Adjourned:} "\textit{liberi tutti}", avendo acquisito l'esperienza del lavoro fatto.
+\end{itemize}
 \end{document}
