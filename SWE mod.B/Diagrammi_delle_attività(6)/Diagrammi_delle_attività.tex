@@ -25,4 +25,20 @@ solo quel ramo.\\
 
 Può esserci il caso in cui ho bisogno di definire delle \textbf{sottoattività} che saranno un'implementazione di un'azione (farla vedere al dettaglio). In un diagramma di attività, tra un'azione e un altro passo passano degli oggetti. Un'azione prende un oggetto in input e restituisce un oggetto in output.
 
+\includegraphics[width=0.75\columnwidth]{img7}
+
+E' anche possibile, l'invio e la ricezione di messaggi a un altro diagramma di attività (quindi verso l'esterno). Quando voglio ricevere un messaggio dall'utente l'elaborazione viene bloccata in attesa della ricezione. Queste due primitive individuano il concetto di \textbf{sincronizzazione}.\\
+La \textit{clessidra} è un \textbf{timer}, verifica il passaggio del tempo.
+
+\includegraphics[width=0.75\columnwidth]{img1}
+
+Gli archi che connettono due azioni servono per generare un flusso da un'azione a un'altra. E' possibile spezzare un arco in due con una notazione sotto forma di etichetta o avere un evento senza un arco entrante, questo sarà un evento ripetuto.
+
+Le \textbf{regioni di espansione:} sono utili quando dobbiamo ripetere delle attività su delle collezioni. Ogni elemento della lista è un \textit{token}, un solo token in uscita dalla regione.
+
+\includegraphics[width=0.5\columnwidth]{img2}
+
+Non tutti i flussi possono arrivare alla fine, in tal caso c'è un \textbf{nodo di terminazione} che fa morire il token.
+
+
 \end{document}
