@@ -1,0 +1,28 @@
+\input{../Templates/layout}
+\input{../Templates/commands}
+\begin{document}
+
+\section{Diagrammi delle attività (6)}
+
+Aiutano a descrivere gli aspetti dinamici dei casi d'uso. Un'attività è un insieme di più azioni:
+\begin{itemize}
+	\item \textbf{Nodo iniziale:} da dove inizia l'esecuzione del processo;
+	\item \textbf{Fork:} elaborazione che può essere anche parallela;
+	\item \textbf{Join:} sincronizzazione tra più processi.
+\end{itemize}
+
+
+Il percorso che si descrive va dal nodo iniziale a quello finale ed è l'illustrazione di come l'attività deva essere eseguita. Ogni azione è descritta da un rettangolo con i bordi smussati e ha una descrizione interna. Una decisione, o \textbf{branch}, serve per modellare le condizioni (gli \textit{if}). La condizione si chiama \textbf{guardia}. L'insieme dei rami deve dare la totalità delle condizioni. Quando due o più branch si riuniscono abbiamo un \textbf{merge} che raggruppa il flusso.
+
+\includegraphics[width=0.5\columnwidth]{img5} % Example image
+
+Questo diagramma mi permette di modellare anche il parallelismo. Questa fase parallela è detta \textbf{fork}. Il fork sdoppia un token in tante azioni che vengono eseguite in parallelo, o in sequenza se non ci interessa l'ordine di esecuzione dei rami. Per ricollegare più flussi paralleli usiamo la \textbf{join}, che potrebbe avere delle espressioni booleane che consentono di proseguire solo se queste sono soddisfatte.
+
+\includegraphics[width=0.75\columnwidth]{img6} % Example image
+
+Può succedere che uno dei flussi, per qualche condizione, \textbf{muoia}, ovvero non abbia delle condizioni di terminazione. In questo caso non termina l'intera attività ma 
+solo quel ramo.\\
+
+Può esserci il caso in cui ho bisogno di definire delle \textbf{sottoattività} che saranno un'implementazione di un'azione (farla vedere al dettaglio). In un diagramma di attività, tra un'azione e un altro passo passano degli oggetti. Un'azione prende un oggetto in input e restituisce un oggetto in output.
+
+\end{document}
