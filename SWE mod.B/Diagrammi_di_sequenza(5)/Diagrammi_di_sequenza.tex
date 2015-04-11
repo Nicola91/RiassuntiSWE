@@ -1,0 +1,33 @@
+\input{../Templates/layout}
+\input{../Templates/commands}
+\begin{document}
+
+\section{Diagrammi di sequenza (5)}
+
+Descrivono la collaborazione di un gruppo di oggetti che devono implementare collettivamente un comportamento.
+
+\includegraphics[width=0.5\columnwidth]{img6} % Example image
+
+
+Le iterazioni tra più partecipanti avvengono tramite \textbf{messaggi}. L'inizio di un messaggio si rappresenta con una freccia continua da un partecipante all'altro. E' possibile avere anche un messaggio che arriva dall'\textbf{esterno} del partecipante. L'evento esterno attiva il diagramma di sequenza e lo fa partire. Il ritorno di un messaggio è rappresentato da una freccia tratteggiata.\\
+Esistono due possibili messaggi: 
+\begin{itemize}
+	\item \textbf{Asincroni}
+	\item \textbf{Sincroni}
+\end{itemize}
+
+\includegraphics[width=0.5\columnwidth]{img5} % Example image
+
+
+Un partecipante può creare un altro partecipante (normalmente tramite la \textit{new}), per questo si usa la \textbf{create}:
+
+\includegraphics[width=0.5\columnwidth]{img7} % Example image
+
+
+Di contro un oggetto può richiedere la distruzione di un altro oggetto. In questo caso si invia un altro messaggio e si mette una X sulla linea della vita del partecipante. Un oggetto può anche autodistruggersi.\\
+
+Se ho bisogno di modellare la collaborazione uso i diagrammi di sequenza, se devo modellare algoritmi uso i diagrammi di attività.\\
+Controllo \textbf{centralizzato} e \textbf{distribuito}. Bisogna cercare di delegare il più possibile agli oggetti le operazioni su se stessi (\textit{delegation pattern}. Nel contratto distribuito non abbiamo più un registro che \textit{schedula} tutte le attività, ma tutto parte da un singolo oggetto che invoca metodi su altri oggetti, manda e riceve messaggi.\\
+
+
+\end{document}
