@@ -1,7 +1,7 @@
 \input{../Templates/layout}
 \input{../Templates/commands}
 \begin{document}
-\section{Qualità del software(6)}
+\section{Ingegneria dei requisiti(8)}
 
 L'attività di \textbf{analisi dei requisiti} è importantissima, comporta molte competenze ed è complessa, per cui viene chiamata \textbf{Ingegneria dei requisiti}. Un requisito può essere visto da due lati:
 
@@ -44,9 +44,9 @@ I prodotti attesi alla fine di questa fase sono molteplici:
 \begin{itemize}
 	\item Dall'analisi dei bisogni e delle fonti:
 	\begin{itemize}
-		\item Capitolato d'appalto (unico di responsabilità del cliente, definisce i requisiti)
-		\item Studio di fattibilità
-		\item Analisi dei requisiti
+		\item \textbf{Capitolato d'appalto:} (unico di responsabilità del cliente, definisce i requisiti)
+		\item \textbf{Studio di fattibilità:} serve a valutare rischi (individuazione dei rischi), costi e benefici per poi decidere se procedere
+		\item \textbf{Analisi dei requisiti:} analisi dei bisogni e delle fonti
 	\end{itemize}
 	\item Dalla ripartizione dei requisiti
 	\begin{itemize}
@@ -59,5 +59,61 @@ Per produrli si può  ricorrere a due tipi di approccio:
 	\item \textbf{Approccio Funzionale}
 	\item \textbf{Approccio Object-Oriented}
 \end{itemize}
-%slide 17 ingegneria dei requisiti
+
+Un ulteriore passo sarà quello della classificazione dei requisiti trovati:
+\begin{itemize}
+	\item \textbf{Attributi di prodotto:} definiscono le caratteristiche richieste al sistema, esprimono \textit{requisiti funzionali, prestazionali e quantitativi} 
+	\item \textbf{Attributi di processo:} pongono vincoli sui processi impiegati nel progetto, esprimono \textit{ulteriori requisiti extra-funzionali}
+\end{itemize}
+
+\includegraphics[width=0.75\columnwidth]{img2}
+
+Sicuramente i requisiti devono essere verificabili, chi impone un requisito teoricamente deve avere anche idea di come accertarne il soddisfacimento, vediamo per i vari tipi di requisiti una linea guida per verificarli:
+
+\begin{itemize}
+	\item Requisiti funzionali: test, dimostrazione formale, revisione;
+	\item Requisiti prestazionali: misurazione;
+	\item Requisiti qualitativi: verifica ad hoc;
+	\item Requisiti dichiarativi: revisione.
+\end{itemize}
+in oltre tutti questi tipi di requisiti hanno diversa utilità strategica, possono essere:
+\begin{itemize}
+	\item \textbf{Obbligatori:} irrinunciabili per qualsiasi stakeholder;
+	\item \textbf{Desiderabili:} non strettamente necessari ma di valore aggiunto riconoscibile;
+	\item \textbf{Opzionali:} relativamente utili, contrattabili in seguito.
+\end{itemize}
+
+L'interesse di un fornitore è \textbf{negoziare} questi requisiti. A noi sta il compito di classificare in modo elastico. I requisiti non devono essere in contraddizione tra loro, non devono essere mai in conflitto o sovrapposti. I requisiti nascono scritti in un linguaggio naturale, (\textit{i capitolati}) e noi vogliamo portarci in un linguaggio che sia il più vicino possibile ad automi. Cercheremo tecniche che rendono il più possibile automatico ciò che facciamo (es. UML o tabelle).\\
+
+\textbf{IEE 830-1998} è un documento che descrive le pratiche raccomandate per scrivere la specifica dei requisiti. Ci sono 8 proprietà fondamentali:
+
+\begin{enumerate}
+
+	\item \textbf{Unambigous:} mai alcuna incertezza su che cosa significano;
+	\item \textbf{Correct:} non deve nascere sbagliato perchè fa danni;
+	\item \textbf{Completi} ;
+	\item \textbf{Verifiable:} a basso costo;
+	\item \textbf{Consistence:} non posso chiedere una cosa e il suo contrario;
+	\item \textbf{Modifiable:} serve una tecnica che renda modificabile l'insieme dei requisiti. Sui requisiti devo poter aggiungere, togliere, cercare, aggiornare: operazioni tipiche da basi di dati;
+	\item \textbf{Traceable:} deve essere univocamente identificabile;
+	\item \textbf{Ranked:} per rilevanza.
+
+\end{enumerate}
+
+\textbf{Verifica dei requisiti}
+Deve essere eseguita su un documento organizzato. Tecnica di ricerca \textit{a pettine}, \textbf{walkthrough}, tecnica completamente manuale, una ricerca a largo spettro; lo si fa quando non si sa esattamente cosa cercare; tecnica dell'\textbf{ispezione}, in cui c'è una lettura mirata e strutturata; questa tecnica è molto più automatizzabile. 
+
+Facendo walkthrough impariamo e sviluppiamo tecniche per fare ispezione. Sui requisiti devo poter fare una buona identificazione e classificazione. Dentro un progetto tutto rimanda ai requisiti, tutto è sempre in una forma tracciabile e riconducibile al \textit{perchè è lì}, questo deve essere fatto attraverso procedure e automatizzazioni.\\
+
+\includegraphics[width=0.5\columnwidth]{img3}
+
+\textbf{SEMAT}, nella struttura c'è una progressione di stati molto utili da analizzare. I requisiti hanno un ciclo di vita proprio che passa attraverso 6 stati, ciascuno con delle dipendenze.
+\begin{enumerate}
+	\item \textbf{Conceived:} (concepito), si vede un'opportunità nel fare le cose e i committenti sono identificati. \textbf{Bounded}, i requisiti sono su un recinto e potrò ragionare macroscopicamente di fattibilità;
+	\item \textbf{Coherent:} quando i requisiti sono classificati e quelli chiari sono distinti;
+	\item \textbf{Acceptable:} diventa un punto dal quale avanzare e dal quale non vorremmo mai retrocedere, \textit{Base line};
+	\item \textbf{Addressed:} i requisiti sono collocati, ho delle soluzioni specifiche e il prodotto che sto facendo soddisfa i requisiti. Questo stato lo raggiungiamo prima del collaudo;
+	\item \textbf{Fullfilled:} in cui ``le cose sono soddisfatte'', stato dell'accattazione. Le transizioni sono più vicine nel tempo nella parte iniziale
+\end{enumerate} 
+
 \end{document}
