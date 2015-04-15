@@ -69,5 +69,38 @@ Assunto di aver capito  questo, cerchiamo quali sono le qualità da perseguire i
 All'inizio della progettazione devo avere sicuramente uno stile architetturale che può essere o \textbf{top-down} (decompone i problemi) o \textbf{bottom-up} (compone le soluzioni). L'approccio normalmente utilizzato è un \textbf{compromesso} fra queste due tecniche, \textbf{meet-in-the-middle}, un approccio intermedio.
 
 Un \textbf{pattern} lo possiamo intendere come soluzioni fattorizzate per problemi ricorrenti.
-%slide 27
+
+I  pattern architetturali possono essere molti:
+
+\begin{itemize}
+	\item Architettura a livelli (\textit{Three-tier}) che comprende lo stato della presentazione, quello della logica operativa, e quello dell'organizzazione dei dati;
+	\item Architettura produttore-consumatore;
+	\item Architettura cliente-servente, ci sono due sottovarianti, con \textit{fat client} e con \textit{thin client};
+	\item Architettura \textit{peer-to-peer}, interconnessione di scambio senza server di mezzo.
+	\item Architettura di relazione, MVC, il \textbf{Model} incorpora il modello dei dati e le operazioni su di essi, la \textbf{View} incorpora la logica di presentazione, riceve in input e mostra in output l'esito delle azioni svolte dal controller sul model, \textbf{Controller} incorpora la logica di controllo del sistema;\\
+	\includegraphics[width=0.5\columnwidth]{img2}
+\end{itemize}
+
+Per componente si intende un elemento dell'architettura con delle interfacce chiare e formate. Relazioni tra più componenti espresse con delle frecce. Una \textbf{parte} è un'interfaccia esposta da una componente architetturale. Un \textbf{connettore} è una connessione tra più parti (in UML si chiama \textit{associazione}). E' importante capire che l'architettura dev'essere valutata per la sua \textbf{qualità}. Cercheremo metodi utili e ambienti di progettazione che questi metodi importano. Questo perchè perseguiamo \textit{qualità by construction}. Vogliamo che la \textbf{baseline} sia pulita e quindi bisogna verificare che l'architettura lo sia. La progettazione la distingueremo in due fasi (lassi di tempo contigui e continui):
+
+\begin{itemize}
+
+	\item una di \textbf{alto livello} in cui fissiamo l'architettura e i pattern;
+	\item una di \textbf{dettaglio} in cui riempiamo i buchi per agevolare il lavoro del programmatore. Definizione delle unità realizzative \textbf{moduli}.In questa fase in oltre si assegnano le attività ai componenti, si produce la documentazione necessaria perchè la programmazione possa procedere in modo più disciplinato e certo possibile.
+
+\end{itemize}
+
+
+Per descrivere l'architettura serve un \textbf{documento}, per produrre questo possiamo riferirci a degli standard procedurali, i quali sono però troppo rigidi. Si è capito che non è utile imporre procedure. Non è formativo imporre strutture di documenti, ma produrre processi. A noi interessa chiederci che cosa dobbiamo raccontare rispetto alle attese del committente. I documenti non devono avere una struttura standard.\\
+
+\textbf{Stati di processo} per SEMAT:
+
+\begin{itemize}
+
+	\item \textbf{Architecture selected:} dobbiamo scegliere l'architettura e dobbiamo spiegare perché essa è adatta al sistema. Selezione delle tecnologie necessarie, posso quindi fare stime di costo sensate. Decisione su \textbf{buy}, \textbf{build}, \textbf{make}. In questo stadio di avanzamento non c'è nemmeno una linea di codice, niente di realizzato;
+	\item \textbf{Demonstrable:} dimostrazione delle principali caratteristiche del sistema agli stakeholder. Decisioni su interfacce e configurazioni di sistema. Ho fatto e ho completato la progettazione ad alto livello ed eventualmente ho dei prototipi, ma non ho ancora implementato nulla;
+	\item \textbf{Usable:} il sistema è usabile e ha le caratteristiche desiderate. Non è completamente finito, ho ancora difetti, ma essi sono accettabili. Quindi possiamo \textit{sperare} di iniziare a fare la revisione di collaudo;
+	\item \textbf{Ready:} il prodotto è così maturo che posso iniziare a scrivere il \textit{manuale utente}, la documentazione per l'utente è pronta, gli stakeholder hanno accettato il prodotto e vogliono che diventi operativo.
+\end{itemize}
+
 \end{document}
