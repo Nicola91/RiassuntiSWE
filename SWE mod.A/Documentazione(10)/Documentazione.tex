@@ -23,9 +23,64 @@ L'architettura va descritta in due documenti distinti:
 
 \begin{itemize}
 
-	\item \textbf{Specifica tecnica};
-	\item \textbf{Definizione di prodotto:} ho bisogno di una \textit{milestone} che dica che questa è una buona architettura.
+	\item \textbf{Specifica tecnica} fissa linee e strategie di realizzazione, avvia la fase realizzativa ma non fissa i dettagli implementativi. Per ogni componente specifica la funzione svolta (con quali strutture dati, quali e quanti flussi di controllo) il tipo di dati in ingresso, in uscita, risorse logiche e fisiche necessarie per il suo funzionamento;
+	\item \textbf{Definizione di prodotto:} consente di stimare costo e tempi di realizzazione,  consente sviluppo parallelo dei componenti terminali. Decompone i componenti architetturali in moduli a grana fine finché ogni modulo ha dimensione, coesione, complessità e accoppiamento appropriati per la codifica in parallelo. In oltre questo documento deve fornire tutti i dettagli necessari alla codifica e alla verifica di ciascun modulo.
 
 \end{itemize}
-%slide 11
+
+\begin{center}
+\includegraphics[width=0.4\columnwidth]{img1}
+\end{center}
+
+Per la documentazione si procede in modo \textbf{sequenziale}. In questo modo si suddividono i moduli grandi, in modo da agevolare i programmatori, i quali produrranno tanti moduli e li integreranno tra loro dopo la validazione. Dentro il repository si devono caricare moduli già verificati in modo automatico e/o manuale (preferibilmente automatico perché la verifica manuale costa).\\
+La progettazione di dettaglio fissa unità, fissa ciò che troveremo nel \textit{ramo ascendente}. Quando ho unità buone le posso integrare (test di integrazione). Quando tutte le parti sono messe insieme allora posso fare un test di sistema. Nel percorso discendente il lavoro che riguarda la qualità deve includere specifiche progressive delle verifiche che farò per la produzione.\\
+
+Stadi di preparazione dei documenti:
+
+\begin{itemize}
+
+	\item \textbf{Creazione}
+	\item \textbf{Pulitura}
+	\item \textbf{Rilascio}
+
+\end{itemize}
+
+Le transizioni tra uno stato e l'altro hanno l'etichetta di "\textit{documento approvato}".\\
+\textbf{NB} \textit{Tutto ciò che facciamo in discesa implica ciò che faremo in salita, e tutto ciò che facciamo in salita motiva quello che sta in discesa.} \\
+
+Il \textbf{tracciamento dei requisiti}  fissa la relazione tra i prodotti del processo di sviluppo. Può essere fatto:
+
+\begin{itemize}
+
+	\item \textbf{Foward:} in avanti (completezza), "non mi dimentico niente", ciascun ingresso a una fase deve essere messo in relazione con una specifica uscita di quella fase, fatto attraverso \textbf{matrici di tracciabilità};
+	\item \textbf{Backward:} all'indietro (necessità), ciascuna uscita di una fase deve essere messa in relazione con uno specifico ingresso a quella fase.
+\end{itemize}
+
+
+
+
+Il tracciamento deve essere assicurato ed automatizzato il più possibile. Dobbiamo avere \textbf{evidenza di copertura}. E' un lavoro potenzialmente oneroso e non può essere fatto a mano. I requisiti andranno identificati attraverso codici che li renderanno \textbf{univoci}. Un codice che definisca di cosa stiamo parlando (es. RU). Poi dovrò numerarli in modo gerarchico, in cui c'è uno spazio e un ambito. Non un numero in modo sequenziale ma raggruppato attorno a \textbf{categorie}. Non devo avere necessariamente solo numeri ma posso avere anche lettere.\\
+
+\textbf{Manuale utente:} deve essere adatto alle caratteristiche dell'utente e alle caratteristiche dell'interfaccia utente. Un manuale serve come informazione supplementare. Si usa uno stile molto succinto e sintetico, non narrativo. \\
+\textbf{Tipi di manuali}:
+
+\includegraphics[width=0.5\columnwidth]{img2} % Example image
+
+
+Stile di scrittura:
+
+\begin{itemize}
+
+	\item Forma attiva invece che passiva;
+	\item Correttezza grammaticale e tipografica;
+	\item Frasi brevi e intorno a un solo fatto;
+	\item Usare liste piuttosto che frasi;
+	\item Paragrafi brevi, fatti di poche frasi;
+	\item Stile non verboso;
+	\item Terminologia precisa (glossario);
+	\item Usare più punti di vista per descrizioni complesse;
+	\item Usare sezioni e sottosezioni titolate.
+
+\end{itemize}
+
 \end{document}
