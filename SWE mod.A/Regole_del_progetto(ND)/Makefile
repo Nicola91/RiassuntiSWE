@@ -2,7 +2,7 @@ latex=pdflatex -synctex=1 -interaction=nonstopmode
 # aspell=sudo aspell --mode=tex --lang=it check
 
 compile: 
-	$(latex) Considerazioni_strategiche.tex && $(latex) Considerazioni_strategiche.tex
+	$(latex) Regole_del_progetto.tex && $(latex) Regole_del_progetto.tex
 	rm -rf *.aux 
 	rm -rf *.log
 	rm -rf *.out
@@ -12,7 +12,7 @@ compile:
 	rm -rf *.lot
 
 compilenoopen:
-	$(latex) Considerazioni_strategiche.tex && $(latex) Considerazioni_strategiche.tex
+	$(latex) Regole_del_progetto.tex && $(latex) Regole_del_progetto.tex
 	rm -rf *.aux 
 	rm -rf *.log
 	rm -rf *.out
