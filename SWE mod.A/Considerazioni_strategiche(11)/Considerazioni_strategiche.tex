@@ -56,8 +56,56 @@ Tecniche progettuali:
 	\item\textbf{Coesione:} è la misura dell'intensità della relazione all'interno di una singola parte.
 	\item\textbf{Astrazione:} omettere informazione per poter applicare operazioni simili ad entità diverse. Non importa la forma esatta che ha una cosa ma che abbia informazioni e funzionalità  utili, non voglio sapere tutto, ma le cose importanti in un determinato contesto.
 	\item\textbf{Atomicità:} è un altro criterio molto importante. L'utilità  dell'astrazione non migliora se divido ulteriormente, perché scomporre più del dovuto ha un costo.
-	\item\textbf{Concorrenza:} è molto importante garantire al sistema una concorrenza, ma va ben gestita e se la uso in modo inconsapevole faccio solo danni.
-	\item\textbf{Distribuzione:} se e come i componenti sono disseminati su più nodi di elaborazione e come comunicano tra di loro.
+\end{itemize}
+
+\textbf{Concorrenza:} è molto importante garantire al sistema una concorrenza, ma va ben gestita e se la uso in modo inconsapevole faccio solo danni.
+\textbf{Distribuzione:} se e come i componenti sono disseminati su più nodi di elaborazione e come comunicano tra di loro.
+
+
+Un problema grosso nella produzione del codice è che non siamo in generale preparati ad avere una buona strategia di \textbf{gestione degli errori}:
+
+\begin{itemize}
+	\item \textbf{Relativi al flusso di dati:} non posso assumere che l'utente inserisca sempre dati corretti, ma allo stesso tempo non posso accettare \textit{spazzatura}. Sugli input non posso fare assunzioni ottimistiche. Problematiche relative alla disponibilità di un dato.
+	\item \textbf{Relativo al flusso di controllo:} le azioni che avvengono, gestione di eccezioni che io sollevo o che il sistema genera. Le eccezioni sono problemi che rendono il flusso di controllo instabile, e devo avere una strategia di gestione, altrimenti possono essere dannose.
+	\item \textbf{Relative al trascorrere del tempo:} ci possono essere degli impegni che il programma si è preso nei confronti dell'utente (es. mi aspetto che il programma risponda in tot secondi). Devo mettere quindi un limite rispetto al quale mi aspetto qualcosa. L'utente si immagina che il sistema garantisca delle funzionalità in un tempo finito.
+\end{itemize}
+
+Si può fare progettazione parallela solo se ho costruito un'architettura progettuale che garantisca il disaccoppiamento. Devo garantire l'integrità concettuale, desiderabile in ogni architettura di sistema. Il raccordo tra programmazione e progettazione deve essere esplicito, ci deve essere coerenza. \textbf{Enforce intentions:} l'atto di assicurarsi conformità, "fai in modo che il codice realizzi precisamente le indicazioni della progettazione". Ciò che dico nell'architettura deve essere vero nel codice. La programmazione non deve fare scelte libere, ma rispettare la progettazione. La \textbf{programmazione difensiva}, essere esplicitamente pronti a trattare errori, si fa in due modi:
+
+\begin{itemize}
+
+	\item \textbf{Incapsulamento degli errori:} in tutti i luoghi del codice dove so che posso non avere successo devo poter gestire l'errore. Programmare esplicitamente il trattamento dei possibili errori, \textbf{errori dei dati in ingresso} ed errori logici;
+	\item La strategia di trattamento va prevista nella progettazione.
+
+\end{itemize}
+Possiamo gestire due tipi di errori in diversi modi:
+\begin{itemize}
+
+	\item \textbf{Errori Dati:}
+
+	\begin{itemize}
+
+		\item Attendere fino all'arrivo di un valore legale;
+		\item Assegnare un valore predefinito (\textit{default});
+		\item Usare un valore precedente;
+		\item Registrare l'errore in un \textit{log}, per avere un registro di manutenzione;
+		\item Sollevare eccezioni (se ho un gestore delle eccezioni);
+		\item Abbandonare il programma (se proprio non ce la faccio).
+
+	\end{itemize}
+	
+	\item \textbf{Errori Logici:}
+
+
+	\begin{itemize}
+
+		\item \textbf{Aritmetica in virgola mobile:} la sua approssimazione può cumularsi e condurre a errori importanti e a confronti svianti. Essa è intrisecamente imprecisa, sono operazioni spesso fonti di errore;
+		\item \textbf{Puntatori e limiti delle strutture}, i puntatori sono in generale molto pericolosi. Nel momento in cui manipolo indirizzi porto cose ovunque (\textit{segmentation fault}). Devo avere una programmazione che mi garantisca che queste cose non accadano. Voglio imporre che ai dati ci si acceda attraverso \textit{metodi di interfaccia};
+		\item \textbf{Allocazione dinamica della memoria}, può portare a esaurimento della disponibilità e alla sovrapposizione di aree sensibili (il garbage collector arriva di tanto in tanto...). CHi fa un programma deve sapere quante \textit{new} può fare (oppure non le fa);
+		\item \textbf{Ricorsione}, può portare all'esaurimento della memoria o alla non terminazione. La ricorsione in ogni applicativo ragionevolmente serio è un concetto \textbf{proibito}, consuma lo stack. La combinazione di \textit{new} e ricorsione è ancora peggio;
+		\item \textbf{Concorrenza}, se mal progettata può condurre a errori.
+
+	\end{itemize}
 \end{itemize}
 
 
