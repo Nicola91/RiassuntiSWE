@@ -62,7 +62,7 @@ Tipi di test
 \end{itemize}
 
 \subsection{Analisi Statica}
-Si può applicare ai metodi di lettura che si possono suddividere in due tipo:
+Si può applicare ai metodi di lettura che si possono suddividere in due tipi:
 \begin{itemize}
 	\item \textbf{Walkthrought:} l'obbiettivo è quello di rilevare la presenza di difetti, si esegue una lettura a largo spetto senza l'assunzione di presupposti, le fasi sono: pianificazione, lettura, discussione, correzione dei difetti. 
 	\item \textbf{Inspection:} l'obbiettivo è sempre quello di rilevare difetti ma eseguendo una lettura mirata, si focalizza la ricerca su presupposti, le fasi sono: pianificazione, definizione della lista di controllo, lettura, correzione dei difetti.
@@ -80,6 +80,60 @@ Valori dell'\textbf{Analisi Statica}:
 	\item \textbf{Manutenibità:} analisi statica come strumento ideale, liste di controllo rispetto a specifiche norme di codifica, e alla prove per accertarne, prove di stabilità.
 	\item \textbf{Portabilità:} analisi statica come strumento ideale, liste di controllo rispetto a specifiche norme di codifica, prove come strumento complementare.
 \end{itemize}
+
+Con un software di grandi dimensioni si deve stare attenti alla sicurezza intesa come \textbf{safety}, prevenzione di condizioni di pericolo a persone o cose, e come \textbf{security}, prevenzione di intrusioni. Sw così complessi devono possedere tutte le funzionalità, specificate nei requisiti e tutte le caratteristiche non funzionali per garantire che il sistema lavori sempre come previsto.\\
+Nessun linguaggio di programmazione garantisce a priori la completa verificabilità di ogni programma scritto con esso.\\
+
+Tecniche di verifica:
+\begin{itemize}
+	\item \textbf{Tracciamento:} dimostrare complettezza ed economicità della soluzione \textit{(soddisfacimento di tutti i requisiti, nessuna funzionalità superflua, nessun componente ingiustificato)}, questo va fatto tra i requisiti software e i requisiti utente, tra sorgente e codice oggetto, tra procedure di verifica e requisiti.\\
+	Particolari stili di codifica facilitano la verifica mediante tracciamento \textit{assegnare singoli requisiti a singoli moduli del programma così da avere una sola procedura di prova, maggiorare l'astrazione}.
+	\item \textbf{Revisioni:} strumento essenziale del processo di verifica, non sono automatizzabili, possono essere formali \textbf{audit} o informali \textbf{joint review}
+
+\end{itemize}
+
+Tipi di analisi statica:
+\begin{enumerate}
+	\item \textbf{Flusso di controllo:} si accerta che il codice si esegua nella sequenza specificata, che sia ben strutturato e identifica eventuali segmenti di codice che non terminano, non sono raggiungibili;
+	\item \textbf{Flusso dei dati:} rileva possibili anomalie e accerta che nessun cammino di esecuzione porti ad uno stato incongruente;
+	\item \textbf{Flusso dell'informazione:} determinare le dipendenze in ingresso, uscita, le sole consentite sono quelle previste nella specifica;
+	\item \textbf{Esecuzione simbolica:} si verificano le proprietà del programma tramite la manipolazione algebrica del codice sorgente \textit{(lo si esegue facendo sostituzioni inverse)};
+	\item \textbf{Verifica formale del codice:} provare la correttezza del codice sorgente rispetto alla specifica algebrica dei requisiti, si verifica la correttezza parziale;
+	\item \textbf{Verifica del limite:} verificare che i dati del programma restino entro i limiti del loro tipo e dalla precisione desiderata;
+	\item \textbf{Uso dello stack:} si determina la massima domanda di stack richiesta da un'esecuzione in relazione con la dimensione dell'area di memoria, verificare che non ci possa essere collisione tra stack e heap;
+	\item \textbf{Comportamento temporale:} attenzione alle proprietà temporali richieste dalle dipendenze delle uscite dagli ingressi del programma;
+	\item \textbf{Interferenza:} controllare l'assenza di interferenze tra le partizioni separate del sistema;
+	\item \textbf{Codice oggetto:} assicurarsi che il codice oggetto sia una traduzione esatta del codice sorgente, che non ci siano errori o omissioni introdotte dal compilatore.
+\end{enumerate}
+La verifica solo retrospettiva \textit{(a valle dello sviluppo)} è spesso inadeguata.
+\includegraphics[width=0.5\columnwidth]{img5} % Example image
+
+Eseguire cicli revisione, verifica dopo ogni rilevazione d'errore è troppo oneroso, meglio effettuare analisi statiche durante la codifica. Si deve cercare di avere delle linee guida per la codifica del codice come prediligere o proibire l'uso di particolari costrutti, \textit{separare le interfacce dall'implementazione, massimizzare l'implementazione, massimizzare l'incapsulazione, usare tipi specializzati per specificare i dati}.
+
+\subsection{Analisi Dinamica}
+
+Analisi dinamica=test, la prova che consiste nella verifica dinamica del comportamento del programma, queste prove si faranno su un insieme finito di casi selezionati nel dominio delle esecuzioni possibili.\\
+
+classificazione delle problematiche:
+
+\includegraphics[width=0.5\columnwidth]{img6} % Example image
+
+Dentro la classificazione ci deve essere:
+
+\begin{itemize}
+	\item Terminologia, Fault \rightarrow Error \rightarrow Failure
+	\begin{itemize}
+		\item \textbf{Failure:} quando il comportamento del sistema devia da quello che ci si aspetta;
+		\item \textbf{Error:} possono essere meccanici, di algoritmo o concettuali e causano guasti \textit{Fault} terminali;
+		\item \textbf{Fault:} sono quelli che fanno si che esista l'errore.
+	\end{itemize}
+	\item Fondamenti teorici;
+	\item Oggetti delle prove;
+	\item Obbiettivi delle prove: installazione nell'ambiente di prova, accettazione, collaudo;
+	\item Vincoli di progetto: definizione del processo dei prodotti e del personale addetto alle prove, stima e controllo dei costi;
+	\item Attività di prova: pianificazione e specifica dei casi di prova, sviluppo ambiente di prova.
+\end{itemize}
+
 
 
 \end{document}
