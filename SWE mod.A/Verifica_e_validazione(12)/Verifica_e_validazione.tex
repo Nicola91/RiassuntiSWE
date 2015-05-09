@@ -105,7 +105,7 @@ Tipi di analisi statica:
 	\item \textbf{Interferenza:} controllare l'assenza di interferenze tra le partizioni separate del sistema;
 	\item \textbf{Codice oggetto:} assicurarsi che il codice oggetto sia una traduzione esatta del codice sorgente, che non ci siano errori o omissioni introdotte dal compilatore.
 \end{enumerate}
-La verifica solo retrospettiva \textit{(a valle dello sviluppo)} è spesso inadeguata.
+La verifica solo retrospettiva \textit{(a valle dello sviluppo)} è spesso inadeguata.\\
 \includegraphics[width=0.5\columnwidth]{img5} % Example image
 
 Eseguire cicli revisione, verifica dopo ogni rilevazione d'errore è troppo oneroso, meglio effettuare analisi statiche durante la codifica. Si deve cercare di avere delle linee guida per la codifica del codice come prediligere o proibire l'uso di particolari costrutti, \textit{separare le interfacce dall'implementazione, massimizzare l'implementazione, massimizzare l'incapsulazione, usare tipi specializzati per specificare i dati}.
@@ -121,7 +121,7 @@ classificazione delle problematiche:
 Dentro la classificazione ci deve essere:
 
 \begin{itemize}
-	\item Terminologia, Fault \rightarrow Error \rightarrow Failure
+	\item Terminologia, Fault,Error,Failure;
 	\begin{itemize}
 		\item \textbf{Failure:} quando il comportamento del sistema devia da quello che ci si aspetta;
 		\item \textbf{Error:} possono essere meccanici, di algoritmo o concettuali e causano guasti \textit{Fault} terminali;
@@ -134,6 +134,33 @@ Dentro la classificazione ci deve essere:
 	\item Attività di prova: pianificazione e specifica dei casi di prova, sviluppo ambiente di prova.
 \end{itemize}
 
+La strategia di prova va bene bilanciata tra la \textit{quantità minima} di casi di prova sufficienti a fornire certezza sulla qualità di prodotto e la \textit{quantità massima} di sforzo, tempo e risorse per il completamento della verifica. Nel PdQ devono essere specificate quali e quante prove. Una singola prova non basta, deve infatti essere ripetibile.
 
+3 teoremi che parlano della verifica del software:
+\begin{itemize}
+	\item \textbf{Teorema di Howden:} Non esiste nessun algoritmo che dato un programma P qualsiasi generi un test ideale (da un criterio di affidabilità e valido);
+	\item \textbf{Tesi di Dijksta:} I test su di un programma possono rilevare la presenza di malfunzionamenti, ma non dimostrarne l'assenza;
+\end{itemize}
 
+\includegraphics[width=0.5\columnwidth]{img7} % Example image
+
+Una valida strategia di assemblaggio delle parti è quella incrementale, in quanto i difetti rilevati da un test molto probabilmente saranno relativi all'ultima parte integrata, cercare anche di assemblare prima i produttori dei consumatori così da avere un flusso di controllo e dei dati corretti per i secondi.\\
+Una volta adottata questa strategia i metodi per svolgerla sono due:
+\begin{itemize}
+	\item \textbf{Bottom-up:} si sviluppano prima le parti con maggiore utilità e minor dipendenza funzionale. Questo tipo di approccio riduce il numero di \textit{stub} necessari al test ma le funzionalità di alto livello sono ritardate;
+	\item \textbf{Top-down:} si sviluppano prima le parti più esterne, questa strategia comporta l'uso di molti \textit{stub} ma integra le funzionalità a partire dall'alto.
+\end{itemize}
+
+\textbf{TEST:}
+\begin{itemize}
+	\item \textbf{Test di unità:} un'unità software è composta da uno o più moduli, 2/3 dei difetti vengono identificati da questi test. Per ogni test si definiscono strategia, oggetto da testare, risorse necessarie e piano di esecuzione. Si ha \textbf{Statement Coverage} quando i test effettuati sull'unità sono sufficienti ad eseguire tutte le linee di comando di ciascun dei moduli, si ha \textbf{Branch Coverage} quando ciascun ramo del flusso di controllo viene attraversato almeno una volta.\\
+\textbf{Test funzionale:} (black-box) da solo non può accertare correttezza e completezza della logica interna dell'unità, ciascun insieme di dati in ingresso producono un dato comportamento funzionale che costituisce un caso di prova.\\
+\textbf{Test strutturale:} (white-box) verifica la logica interna del codice dell'unità cercando massima copertura, le prove devono essere progettate per attivare ogni cammino di esecuzione all'interno del modulo, ciascun insieme di dati che attiva un percorso costituisce un caso di prova.
+	\item \textbf{Test di integrazione:} si applica alle componenti specificate nella progettazione architetturale, si selezionano le funzionalità da integrare, si identificano le componenti che le svolgono e si ordina tali componenti per numero di dipendenze crescenti. Problemi rilevati in questo tipo di test sono dovuti a difetti di progettazione o insufficiente qualità dei test di qualità. La quantità è stabilita da quanti ne servono per accertare che tutti i dati scambiati attraverso un'interfaccia siano conformi alla specifica, e che tutti i flussi di controllo previsti in specifica siano stati realizzati e provati.
+	\includegraphics[width=0.5\columnwidth]{img8}
+	\item \textbf{Test di sistema:} verificano il comportamento dinamico del sistema completo rispetto ai requisiti software, iniziano con il completamento dei test di integrazione.
+	\item \textbf{Test di regressione:} possono essere molto onerosi, si accertano che le modifiche introdotte non comportino errori nel sistema, ripetizione selettiva di TS o TI.
+	\item \textbf{Test di accettazione:} accertano il soddisfacimento dei requisiti utente.
+\end{itemize}
+Per una prova è interessante sapere il \textbf{Fattore di copertura} che è suddiviso in \textit{Copertura funzionale} (rispetto alla percentuale di funzionalità esercitate come viste dall'esterno) e in \textit{Copertura strutturale} (rispetto alla percentuale di logica interna del codice esercitata). 
 \end{document}
