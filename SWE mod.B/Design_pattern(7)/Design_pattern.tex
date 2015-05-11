@@ -1,0 +1,31 @@
+\input{../Templates/layout}
+\input{../Templates/commands}
+\begin{document}
+
+\section{Design pattern(7)}
+
+Un \textbf{Design pattern} una soluzione progettuale generale ad un problema ricorrente. Per descriverlo sono essenziali quattro elementi:
+\begin{itemize}
+	\item Nome del pattern;
+	\item Problema che il pattern risolve;
+	\item La soluzione;
+	\item Le conseguenze;
+\end{itemize}
+
+\textbf{MVC:} o Model View Controller, questo pattern disaccoppia le 3 componenti rendendole riusabili. Model, dati e regole di accesso, View, rappresentazione grafica, Controller, reazione della UI agli input utente.
+
+Ci sono vari livelli di programmazione:
+
+\includegraphics[width=0.3\columnwidth]{img1}
+\begin{itemize}
+	\item Applicazioni: riuso propriamente interno;
+	\item Toolkit: librerie software che possono essere riusabili per progetti per fornire funzionalità generiche;
+	\item Framework: insieme di classi che operano per costruire architetture riutilizzabili per sviluppare un dominio di applicazioni. Non sono design pattern in quanto questi ultimi sono più astratti, disegnano architetture più piccole e sono meno specializzati.
+\end{itemize}
+
+Ci sono dunque varie tipologie di pattern:
+\begin{itemize}
+	\item \textbf{Architetturali:} sono pattern di alto livello (MVC, Peer to peer, client-server);
+	\item \textbf{Progettuali:} progettazione di dettaglio di componenti, definiscono micro architetture (Factory, Command, Proxy..)
+	\item \textbf{Idiomi:} basso livello di astrazione, specifici del linguaggio di programmazione. Non sono propriamente dei design pattern infatti sono una soluzione specifica ad un linguaggio.
+\end{itemize}
