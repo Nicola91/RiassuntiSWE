@@ -13,40 +13,36 @@
 
 \end{itemize}
 
-Nella fase di ritiro il sw cessa di esistere nel senso che non c'è più alcun tipo di supporto per quel prodotto. Le transizioni sono strettamente e formalmente regolate.	\\
-
-\includegraphics[width=0.75\columnwidth]{img2} % Example image
-\\
+Nella fase di ritiro il sw cessa di esistere nel senso che non c'è più alcun tipo di supporto per quel prodotto. Le transizioni sono strettamente e formalmente regolate, e sono l'insieme di attività svolte sul prodotto che servono a farlo avanzare nel grado di maturazione.	\\
 
 L'efficienza si vede dove vedo il consumo di risorse. L'efficacia si misura guardando i prodotti e vedendo se sono buoni o cattivi rispetto alla produzione. Un processo è un insieme di attività coordinate e coese (tutti hanno bisogno di tutti).\\
 Parole chiave:
 \begin{itemize}
 	\item\textbf{Iterazione:} iterazione significa operare rivisitazioni o raffinamenti, può essere distruttivo (ripeto l'avanzamento) e rischio di non essere quantificabile.
-	\item\textbf{Incremento:} Sono incrementale solo se aggiungo, mi avvicino in maniera monotona all'obbiettivo, non tollera errori o mancanze.
+	\item\textbf{Incremento:} Sono incrementale solo se aggiungo, mi avvicino in maniera monotona all'obbiettivo, tollera errori o mancanze.
 	\item\textbf{Prototipo:}servono per provare e scegliere soluzioni, possono essere o usa e getta o fornire stati di incremento(\textbf{baseline}).
 	\item\textbf{Riuso} può essere di due tipi:
 	\begin{itemize}
 	
-		\item occasionale, a basso consto ma a basso impatto.
-		\item sistematico, a maggior costo ma a maggior impatto.
+		\item occasionale: a basso consto ma a basso impatto.
+		\item sistematico: a maggior costo ma a maggior impatto.
 	\end{itemize}
 	\item \textbf{Manutenzione:} va gestita con il controllo di versione che va ben documentato.
+	\item \textbf{Processo:} un processo è un insieme di attività correlate e coese che trasformano ingressi in uscite secondo regole fissate, consumando risorse nel farlo.
 \end{itemize}
 
 Il modello più noto e quello che utilizzeremo e ISO/IEC 12207: questo modello identifica i processi dello sviluppo sw, ne specifica le responsabilità identifica i prodotti di ciascuno.
-
-\includegraphics[width=0.75\columnwidth]{img3} % Example image
 \\
 \textbf{Processi} si dividono in \textbf{Attività} che si dividono in \textbf{Compiti}.
 
 In questo modello ci sono 3 tipi di processi:
 \begin{itemize}
-	\item \textbf{Processi primari:} che includono processi come Acquisizione(dei propri fornitori), Fornitura(gestione rapporto col cliente), Sviluppo, Manutenzione.
-	\item\textbf{Processi di supporto:} che includono processi come Documentazione, Accertamento della qualità, Verifica e Validazione che assieme danno la Qualità, Risoluzione dei problemi
-	\item \textbf{Processi organizzativi:} che includono processi come Gestione dei processi, Gestione delle infrastrutture, Formazione del personale, Miglioramento del processo.
+	\item \textbf{Processi primari:} che includono processi come Acquisizione(dei propri fornitori, non svolto dal team), Fornitura(che si suddivide in attività quali: \texttt{Accettazione} che prevede lo studio di fattibilità e la scelta del capitolato, \texttt{Pianificazione della risposta} si decidono quali documenti redigere) \texttt{Pianificazione} si sceglie il modello di ciclo di vita e si stende la prima versione del PdP), Sviluppo (che si suddivide in attività quali: \texttt{Analisi dei requisiti}, \texttt{Progettazione} con la stesura della specifica tecnica e la definizione di prodotto, \texttt{Codifica}, Manutenzione.
+	\item\textbf{Processi di supporto:} che includono processi come Documentazione, Accertamento della qualità, Verifica (\texttt{Analisi statica} che si suddivide in walkthrought e inspection,\texttt{Analisi dinamica} gestione delle anomalie, test, tracciamento) e Validazione, Qualità, Risoluzione dei problemi
+	\item \textbf{Processi organizzativi:} che includono processi come Gestione dei processi (che si suddividono in \texttt{G. rotazione ruoli, G. comunicazione, G. riunioni, G. tracciamento, G.task, G.milestone}), Gestione delle infrastrutture (formato dalle attività di: \texttt{G. repository, G. GitHooks, G. template}), Formazione del personale (l'attività degli \texttt{Incontri con il proponente}), Miglioramento del processo.
 \end{itemize}
 
-I processi produttivi devono avere un \textbf{ciclo interno} atto a migliorarli costantemente. Il ciclo interno di miglioramento è indicato con l'acronimo PCDA (o ciclo di Deming). Questo ciclo è fatto di 4 attività che vanno applicate al di "sopra" dei processi esistenti:
+I processi produttivi devono avere un \textbf{ciclo interno} atto a migliorarli costantemente. Il ciclo interno di miglioramento in termini di efficacia ed efficienza, è indicato con l'acronimo PCDA (o ciclo di Deming). Questo ciclo è fatto di 4 attività che vanno applicate al di "sopra" dei processi esistenti:
 
 \begin{itemize}
 
