@@ -4,7 +4,6 @@
 \begin{document}
 
 \section{Il ciclo di vita del software(3)}
-% Lunedì 14 Ottobre 2013
 
 \textbf{Ciclo di vita di un software:} Evolve nel tempo e raggiunge \textbf{stati} tramite \textbf{transizioni} scatenate da attività che hanno il fine di far avanzare il sw. Si divide in 4 fasi:
 
@@ -17,39 +16,35 @@
 
 \end{itemize}
 
-\textbf{Fase}:\fbox{\textbf{Def} Periodo di tempo contiguo che cattura transizioni o segmenti di ciclo di vita}
+\textbf{Fase}:\texttt{ Periodo di tempo contiguo che cattura transizioni o segmenti di ciclo di vita}
 
 La scelta del ciclo di vita pone vincoli sulla pianificazione del progetto, è indipendente da metodi e strumenti di sviluppo.\\
 
 Tipi di ciclo di vita:
 \begin{itemize}
 	\item \textbf{Cascata:} successione di fasi rigidamente sequenziali con dipendenze causali tra di loro, non ammette ritorno a fasi precedenti.(Pre e Post solide e definite all'origine, modello che non spreca, al tempo t so dove sono). Modello \textbf{Document driven} (documenti che spiegano la fiducia nelle scelte fatte), non sono previsti prototipi.\\
+	Per fasi qui si intende durate temporali con dipendenze causali tra loro.
 	Difetti: eccessivamente rigido, non ammette cambiamenti ai requisiti in corso d'opera, il committente vede solo l'opera finita.
-	\item \textbf{Incrementale:} modello iterativo, potenzialmente distruttivo(avanzo nel tempo ma non nei risultati). In questo modello procedo per fasi che possono anche essere completamente separate le une dalle altre, ma a differenza del waterfall posso integrare anche le piccole parti. Produco valore ad ogni incremento, ed ogni incremento riduce il rischio di fallimento; le funzionalità essenziali inoltre sono sviluppate nei primi incrementi.
-	Qui si prevedono rilasci multipli e successivi(base stabile ed aggiungo successivamente). Non si ripetono mai l'analisi e la progettazione architetturale.
-	\includegraphics[width=0.75\columnwidth]{img4} % Example image
-	\\Non ritorno mai sul progetto generale.\\
+	\item \textbf{Incrementale:} in questo modello procedo per fasi che possono anche essere completamente separate le une dalle altre, ma a differenza del waterfall posso integrare anche le piccole parti. Produco valore ad ogni incremento, ed ogni incremento riduce il rischio di fallimento; le funzionalità essenziali inoltre sono sviluppate nei primi incrementi.
+	Qui si prevedono rilasci multipli e successivi(base stabile ed aggiungo successivamente). Non si ripetono mai l'analisi e la progettazione architetturale. Non ritorno mai sul progetto generale.\\
 	
-	\item \textbf{Iterativo:} comporta il rischio di non convergenza all'obbiettivo, tuttavia consentono maggior capacità di adattamento. Ogni iterazione comporta un ritorno all'indietro, nella direzione opposta rispetto al tempo.
-	\item \textbf{Evolutivo:} insegue il futuro non ritirando il passato, ho tante attività concorrenti.Questo modello lo attua chi può sostenere molte versioni in parallelo (e quindi ha buone capacità finanziarie), infatti ogni fase ammette iterazioni multiple e parallele. Si può anche modificare la base ATT.
-	\item\textbf{Spirale:} è composto da cicli interni rapidi e ripetuti, mentre quelli esterni aderiscono a qualsiasi altro modello std. Comporta un miglior controllo dei rischi di progetto, infatti pone molta attenzione sugli aspetti gestionali (pianificazione delle fasi, analisi dei rischi), è un modello \textbf{risk driven}. Prevede 4 attività principali 				 		\begin{itemize}
-			\item Definizione degli obbiettivi
-			\item Analisi dei rischi
-			\item Sviluppo e validazione
-			\item Pianificazione
+	\item \textbf{Iterativo:} comporta il rischio di non convergenza all'obbiettivo, tuttavia consentono maggior capacità di adattamento. Ogni iterazione comporta un ritorno all'indietro, nella direzione opposta rispetto al tempo. Iterazione e incremento coincidono quando la sostituzione raffina ma non ha impatto sul resto.
+	\item \textbf{Evolutivo:} insegue il futuro non ritirando il passato, ho tante attività concorrenti. Questo modello lo attua chi può sostenere molte versioni in parallelo (e quindi ha buone capacità finanziarie), infatti ogni fase ammette iterazioni multiple e parallele. Si può anche modificare la base ATT.
+	\item\textbf{Spirale:} è composto da cicli interni rapidi e ripetuti dedicati ad analisi e sviluppi prototipali, mentre quelli esterni aderiscono a qualsiasi altro modello std. Comporta un miglior controllo dei rischi di progetto, infatti pone molta attenzione sugli aspetti gestionali (pianificazione delle fasi, analisi dei rischi), è un modello \textbf{risk driven} e prevede una forte iterazione tra committente e fornitore. Prevede 4 attività principali:
+		\begin{itemize}
+			\item Definizione degli obbiettivi (requisiti, rischi, strategia di gestione)
+			\item Analisi dei rischi (studio delle conseguenze, valutazione delle alternative)
+			\item Sviluppo e validazione (realizzazione del prodotto)
+			\item Pianificazione (decisione circa il proseguimento, pianificazione del proseguimento)
 		\end{itemize}
 	Utilizzato solo per progetti innovativi
-		
-		\includegraphics[width=0.75\columnwidth]{img5} % Example image
-		\\
-		I quadrati rappresentano dei macrostati.
-		\item \textbf{Componenti:} si basa sul riuso dei componenti già fatti, utilizzo meno risorse ed ho un ecosistema(librerie e strumenti) già pronti.
+	\item \textbf{Componenti:} si basa sul riuso dei componenti già fatti, utilizzo meno risorse ed ho un ecosistema(librerie e strumenti) già pronti.
 	\item \textbf{Metodi Agili:} basati su 4 principi fondamentali:
 	\begin{enumerate}
 
 		\item Mettere in primo piano persone e iterazioni piuttosto che processi e strumenti. Gli individui sono importanti ed è importante il modo in cui interagiscono tra loro;
 	
-		\item ciò  che importa e che il sw funzioni non la documentazione;
+		\item Ciò  che importa e che il sw funzioni non la documentazione;
 	
 		\item Avere un buon rapporto con il customer, coinvolgerlo;
 	
@@ -74,7 +69,6 @@ Tipi di ciclo di vita:
 Ad ogni periodo di tempo si prendono le cose più necessarie e si esegue uno spirit, non appena è terminatose manca qualcosa si ritorna al backlog aggiungendo \textit{to do}. Questo ciclo di vita e iterativo in quanto non ho un numero casuale di spirit e questi producono quasi sempre un avanzamento.
 
 \textbf{SEMAT:} \\
-\includegraphics[width=0.5\columnwidth]{img6}\\
 I \textit{Requirements} hanno 6 aggettivi:
 \begin{itemize}
 	\item \textbf{Conceived:} i requisiti vanno concepiti, nascono nel luogo dove stanno gli stakeholder, ovvero tutti coloro che danno forma ad un prodotto. Non significa "\textit{completamente formato}", i requisiti vanno fatti emergere;
@@ -84,7 +78,6 @@ I \textit{Requirements} hanno 6 aggettivi:
 	\item \textbf{Addressed:} ho la soluzione per i requisiti marcati come \textit{Acceptable}, sono capace di dimostrare che soddisfo i requisiti questo va dimostrato nella progettazione;
 	\item \textbf{Fullfilled}, "\textit{compiere}". Ho un prodotto che fa esattamente ciò che mi aspettavo.	\end{itemize}
 	
-\includegraphics[width=0.5\columnwidth]{img7}\\
 Anche il \textit{Work} \textit{le cose da fare} hanno degli stadi ben predefiniti:
 \begin{itemize}
 	\item \textbf{Initiated:} avere un piano di lavoro;
