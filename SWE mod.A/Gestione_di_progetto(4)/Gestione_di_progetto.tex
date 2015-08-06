@@ -5,13 +5,13 @@
 
 Fondamenti della \textbf{Gestione di progetto:}
 \begin{enumerate}
-	\item Introdurre processi nel progetto (introdurre disciplina);
-	\item Stimare i costi e le risorse necessarie (avere una pianificazione preventiva) infatti un progetto diventa fattibile se la stima e accettabile;
+	\item Istanziare processi nel progetto (introdurre disciplina);
+	\item Stimare i costi e le risorse necessarie (avere una pianificazione preventiva dei tempi e dei costi) infatti un progetto diventa fattibile se la stima e accettabile;
 	\item Pianificazione e assegnazione delle attività;
 	\item Controllare le attività e verificare i risultati (avere chiaro e presente lo stato di avanzamento), non devo fare un pull \textit{chiedere} deve essere già tutto pronto. L'uso di \textbf{Milestone} aiuta a capire la differenza tra attesa e realtà.
 \end{enumerate}
 
-Per molto tempo si è pensato che i sw fossero repliche uniche ("\textit{one off}"); grave errore creare cose che siano irripetibili, la nostra attività prevalente sarà la \textit{manutenzione}.
+Per molto tempo si è pensato che i sw fossero repliche uniche ("\textit{one off}"); grave errore creare cose che siano irripetibili, la nostra attività prevalente sarà la \textit{manutenzione}.\\
 
 Vediamo alcuni \textbf{Fattori di rischio} per la gestione di progetto:
 
@@ -54,11 +54,11 @@ Il team necessita di \textbf{ruoli}, che identificano capacità e compiti. Un ru
 
 \end{itemize}
 
-Competenze allo richieste:
+Ruoli all'interno di un team:
 
 \begin{itemize}
 
-	\item \textbf{Analista:} colui che serve per fare analisi dei requisiti; aiuta l'avanzamento di maturità dei requisiti; bisogna avere competenze su più fronti, sapere ascoltare gli \textit{stakeholder}, scrivere requisiti \textit{bounded} e \textit{coherent}, ragionevoli, utili, realizzabili e verificabili. Hanno un gran peso sul successo del progetto; l'analista pensa al problema, non alla soluzione;
+	\item \textbf{Analista:} colui che svolge l'analisi dei requisiti; aiuta l'avanzamento di maturità dei requisiti; bisogna avere competenze su più fronti, sapere ascoltare gli \textit{stakeholder}, scrivere requisiti \textit{bounded} e \textit{coherent}, ragionevoli, utili, realizzabili e verificabili. Hanno un gran peso sul successo del progetto; l'analista pensa al problema, non alla soluzione;
 	
 	\item \textbf{Progettista:} pensa alla soluzione. Deve avere competenze tecnologiche e tecniche. Ricevuto il problema elabora la migliore soluzione possibile nel rispetto dei vincoli finanziari e temporali. Deve sapere di architettura, mettere insieme le parti della soluzione (divide et impera), rendere il problema piccolo affinché sia dominabile. Un solo progettista in un team;
 	
@@ -71,20 +71,18 @@ Competenze allo richieste:
 	\item \textbf{Amministratore:} ruolo molto utile, prepara l'ambiente di lavoro, strumenti di collaborazione e controllo di avanzamento. Gestione della documentazione di progetto. Risoluzione di problemi legati alla gestione di processi. Assegnazione di \textit{tickets}, un incarico con scadenza assegnato ed accettato.
 \end{itemize}
 
-\textbf{Gestione qualità:} la possiamo guardare da due punti di vista: qualità sul prodotto e qualità di processo (su ciò che si fa). E' una competenza strategica, una funzione aziendale e non un ruolo di progetto. Dobbiamo lavorare prima per fare meno manutenzione poi.
+\textbf{Gestione qualità:} è una funzione aziendale, non un ruolo di progetto, la possiamo guardare da due punti di vista: qualità sul prodotto e qualità di processo (su ciò che si fa). Dobbiamo lavorare prima per fare meno manutenzione poi.\\
 
 \textbf{Pianificazione di progetto:} per prima cosa devo definire le attività per pianificarne lo svolgimento e controllarne l'attuazione, per stimare e controllare scadenze e costi.
-\\
-\includegraphics[width=0.75\columnwidth]{img8}
 
 Si pianificano le attività, i flussi di attività e i flussi di azione. Le attività hanno un flusso, si dipanano su un asse temporale. Capite le attività devo assegnare ad esse dei ruoli (non come persone).Devo quantificare lao svolgere un'attività, data, tempo, persone, denaro. Le ore vanno intese come ore di calendario: tempo/persona, quanto tempo uso tali persone sapendo che ciascuna percepisce un costo orario preciso. In base a questo posso capire quanto mi costerà un progetto. Vediamo alcuni strumenti che aiutano la gestione:
 \begin{itemize}
 	\item \textbf{Diagrammi di Gantt:} sull'asse orizzontale c'è il tempo segmentato per unità di lavoro (es. 1gg, una settimana, un mese..). Una buona scelta è utilizzare come unità di misura un giorno (8 ore lavorative), ho anche un calendario (es. sabato e domenica non si lavora). Sull'asse orizzontale ci sono tutte le attività che devo svolgere e archi che rappresentano le transizioni tra una e l'altra. Le dipendenze logiche tra attività: quelle che non hanno dipendenze partono subito, la seconda è la durata minima di tempo/persone che posso usare per una determinata attività. Work allocation, in questa fase non sto allocando persone ma ruoli. Questo grafico permette di cofrontare le stime con i progressi;
-	\item \textbf{Diagramma di PERT:} \fbox{\textbf{Def:} Program Evaluation and Review Technique} descrive le dipendenze temporali tra le attività, serve a trovare le criticità ossia dove ho delle dipendenze temporali strette. Se misuro lo slack e mi accorgo che è 0 o negativo ho una criticità. Indica l'ordine delle attività e la loro durata e indica la prima data in cui posso iniziare un'attività che abbia tutti gli input necessari. Calcolando il cammino più lungo tra l'inizio e la fine del progetto posso calcolare l'attività che finisce prima. Questo diagramma legge il Gantt rispetto allo slack e calcola i cammini critici;
+	\item \textbf{Diagramma di PERT:} \texttt{Program Evaluation and Review Technique} descrive le dipendenze temporali tra le attività, serve a trovare le criticità ossia dove ho delle dipendenze temporali strette. Se misuro lo slack e mi accorgo che è 0 o negativo ho una criticità. Indica l'ordine delle attività e la loro durata e indica la prima data in cui posso iniziare un'attività che abbia tutti gli input necessari. Calcolando il cammino più lungo tra l'inizio e la fine del progetto posso calcolare l'attività che finisce prima. Questo diagramma legge il Gantt rispetto allo slack e calcola i cammini critici;
 	\item \textbf{Work Breakdown Structure:} si frantumano le attività in sotto attività e vengono organizzate in modo gerarchico. Ogni componente deve essere univocamente identificabile. Un'attività decomposta permette di agevolare il parallelismo.  Allocazione delle risorse: assegnare attività a ruoli e poi ruoli a persone per far si che ogni persona sia impegnata per tutto il tempo disponibile. Diagramma di Gantt ribaltato sulle persone (al posto delle attività); l'intento è sapere che sto usando le persone in parallelo ed entro il limite dato.
 \end{itemize}
 
-Fattori di influenza che fanno aumentare il tempo/persona:
+Fattori di influenza che fanno aumentare il tempo/persona (unità di misura):
 \begin{itemize}
 	\item \textbf{Dimensione del progetto:} quante righe di codice mi servono, la dimensione si riesce a stimare macroscopicamente; sta tra due assi: quanto codice e quanto complesso;
 	\item \textbf{Esperienza del dominio:} quanta è l'esperienza (normativa, tecnologica, aspettative degli utenti) di chi svolge il progetto nei confronti del dominio a cui siamo davanti;
@@ -99,7 +97,10 @@ Uno dei problemi più difficili da risolvere sono le \textbf{Problematiche di st
 	\item \textbf{Legge della domanda:} l'utilità determina il prezzo
 \end{itemize}
 
-\textbf{CoCoMo:} \fbox{\textbf{Def:} Constructive Cost Model} è un tentativo di tradurre vari numeri nel costo necessario. \fbox{M/P=C x D \textsuperscript{s} x M}\\
+\textbf{CoCoMo:} \texttt{Constructive Cost Model} è un tentativo di tradurre vari numeri nel costo necessario.\\
+\begin{center}
+	\fbox{M/P=C x D \textsuperscript{s} x M}
+\end{center}
 Mesi/Persona=Fattore di complessità del progetto x misura della dimensione stimata del progetto x fattore di complessità x moltiplicatori di costo.
 \\
 In una versione base:
@@ -109,7 +110,7 @@ In una versione base:
 	\item Complessità elevata: C=3.6, S=1.20, M=1;
 \end{itemize}
 
-Il \textbf{Piano di progetto} fissa le risorse disponibili, la suddivisione e il calendario delle attività. Descrive in oltre anche l'analisi dei rischi che dovrebbero essere mitigati grazie l'utilizzo di \textbf{milestone}.
+Il \textbf{Piano di progetto} fissa le risorse disponibili, la suddivisione e il calendario delle attività. Descrive in oltre l'analisi dei rischi che dovrebbero essere mitigati grazie l'utilizzo di \textbf{milestone}.
 La prima attività da fare è l'\textbf{identificazione dei rischi}, fare una lista dei rischi potenziali, che dev'essere il più esaustiva possibile (livello tecnologico, del personale, organizzativo, dei requisiti, valutazione dei costi). Successivamente verifico l'incidenza di questi rischi e la loro probabilità: rischi più seri e rischi meno probabili. Ulteriore cosa che faccio è \textbf{monitoring}. Tutta questa sequenza è ciclica, perchè nel tempo alcuni rischi spariscono ed altri emergono.
 
 
