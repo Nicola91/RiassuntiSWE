@@ -25,6 +25,7 @@ Dei processi di supporto al ciclo di vita sono:
 Questi due processi formano la \textbf{qualifica}.
 
 Si lavora sempre secondo regole di procedura. Devono esistere delle regole prima di iniziare il lavoro. Avremo alla fine specializzato un prodotto che soddisfa i requisiti iniziali e le sue aspettative. Un lavoro \textbf{verificato} è un lavoro fatto nel modo giusto e secondo le regole date. \\
+
 Molti dei sistemi al giorno d'oggi sono detti \textbf{socio-tecnici}, hanno come dato rilevante l'elemento \textbf{umano}, che è come la persona userà quel prodotto. Chiedersi che ruolo ha l'utente umano nel sistema è parte fondamentale dell'AR. In ogni sistema organizzato c'è uno \textit{sportello} rivolto all'umano; molto spesso si chiama \textit{front office} (interfaccia utente). L'opposizione è il \textit{back office} in cui si prepara ciò che andrà al front office (es. database). Devo capire entrambe queste parti per realizzare un sistema socio-tecnico. E' molto raro progettare un sistema esclusivamente tecnico. Ci sono due fasi:
 
 \begin{itemize}
@@ -34,31 +35,25 @@ Molti dei sistemi al giorno d'oggi sono detti \textbf{socio-tecnici}, hanno come
 
 \end{itemize}
 
-In questa fase i processi coinvolti sono la \textbf{Documentazione} e la \textbf{Gestione e manutenzione dei prodotti}. Questo tipo di analisi dei requisiti da luogo a un ciclo di vita simile:\\
+In questa fase i processi coinvolti sono la \textbf{Documentazione} (studio di fattibilità, analisi dei requisiti) e la \textbf{Gestione e manutenzione dei prodotti} (tracciamento dei requisiti, impostazione e gestione della configurazione, gestione dei cambiamenti).\\
+Questo tipo di analisi dei requisiti da luogo a un ciclo di vita simile, modello incrementale:\\
 \includegraphics[width=0.75\columnwidth]{img1}
 \\
-Questo rappresentato è un modello sequenziale con le base line, condizione di massima sicurezza. In opposto con un modello \textit{Agile} non fissiamo la base line ma abbiamo i requisiti dal confronto con il cliente.
-
 I prodotti attesi alla fine di questa fase sono molteplici:
 
 \begin{itemize}
 	\item Dall'analisi dei bisogni e delle fonti:
 	\begin{itemize}
-		\item \textbf{Capitolato d'appalto:} (unico di responsabilità del cliente, definisce i requisiti)
-		\item \textbf{Studio di fattibilità:} serve a valutare rischi (individuazione dei rischi), costi e benefici per poi decidere se procedere
-		\item \textbf{Analisi dei requisiti:} analisi dei bisogni e delle fonti
+		\item \textbf{Definizione dei requisiti:} genera il capitolato d'appalto(unico di responsabilità del cliente, definisce i requisiti)
+		\item \textbf{Specifica dei requisiti:} genera lo studio di fattibilità (All'interno si valutano rischi, costi e benefici per decidere se procedere) e l'analisi dei requisiti, serve a valutare rischi (individuazione dei rischi), costi e benefici per poi decidere se procedere
 	\end{itemize}
 	\item Dalla ripartizione dei requisiti
 	\begin{itemize}
-		\item Specifica tecnica (modellazione architetturale del SW con caratterizzazione architetturale dei componenti)
+		\item \textbf{Modellazione concettuale del sistema SW:} genera la specifica tecnica (caratterizzazione architetturale dei componenti)
 	\end{itemize}
 \end{itemize}
 
-Per produrli si può  ricorrere a due tipi di approccio:
-\begin{itemize}
-	\item \textbf{Approccio Funzionale}
-	\item \textbf{Approccio Object-Oriented}
-\end{itemize}
+Per produrli si può  ricorrere a due tipi di approccio \textbf{Approccio Funzionale} \textbf{Approccio Object-Oriented}
 
 Un ulteriore passo sarà quello della classificazione dei requisiti trovati:
 \begin{itemize}
@@ -66,9 +61,8 @@ Un ulteriore passo sarà quello della classificazione dei requisiti trovati:
 	\item \textbf{Attributi di processo:} pongono vincoli sui processi impiegati nel progetto, esprimono \textit{ulteriori requisiti extra-funzionali}
 \end{itemize}
 
-\includegraphics[width=0.75\columnwidth]{img2}
 
-Sicuramente i requisiti devono essere verificabili, chi impone un requisito teoricamente deve avere anche idea di come accertarne il soddisfacimento, vediamo per i vari tipi di requisiti una linea guida per verificarli:
+Sicuramente i requisiti devono essere verificabili, chi impone un requisito teoricamente deve avere anche idea di come accertarne il soddisfacimento, vediamo per i vari tipi di requisiti una linea guida per verificarli, prima di tutto ci sono due macro categorie che sono gli attributi di prodotto (definiscono le caratteristiche richieste al sistema) e quelli di processo (pongono vincoli sui processi impiegati nel sistema):
 
 \begin{itemize}
 	\item Requisiti funzionali: test, dimostrazione formale, revisione;
@@ -104,8 +98,6 @@ L'interesse di un fornitore è \textbf{negoziare} questi requisiti. A noi sta il
 Deve essere eseguita su un documento organizzato. Tecnica di ricerca \textit{a pettine}, \textbf{walkthrough}, tecnica completamente manuale, una ricerca a largo spettro; lo si fa quando non si sa esattamente cosa cercare; tecnica dell'\textbf{ispezione}, in cui c'è una lettura mirata e strutturata; questa tecnica è molto più automatizzabile. 
 
 Facendo walkthrough impariamo e sviluppiamo tecniche per fare ispezione. Sui requisiti devo poter fare una buona identificazione e classificazione. Dentro un progetto tutto rimanda ai requisiti, tutto è sempre in una forma tracciabile e riconducibile al \textit{perchè è lì}, questo deve essere fatto attraverso procedure e automatizzazioni.\\
-
-\includegraphics[width=0.5\columnwidth]{img3}
 
 \textbf{SEMAT}, nella struttura c'è una progressione di stati molto utili da analizzare. I requisiti hanno un ciclo di vita proprio che passa attraverso 6 stati, ciascuno con delle dipendenze.
 \begin{enumerate}
