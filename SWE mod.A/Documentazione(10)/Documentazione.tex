@@ -4,9 +4,10 @@
 
 \section{Documentazione (10)}
 
-La documentazione deve essere una conseguenza dei processi organizzativi. Serve documentare nel modo meno intrusivo possibile. Fra le cose più importanti che fa la documentazione è fornire una misura sull'avanzamento del progetto (Piano di progetto), che fornisce dei \textbf{consuntivi} (stato fotografato) e \textbf{preventivi} (stime). I consuntivi sono finali se siamo alla fine del progetto, o parziali se siamo in corso. Documentare serve per dominare la complessità dei processi produttivi, attenuare la volatilità dei requisiti, facilitare il controllo di avanzamento.
+La documentazione deve essere una conseguenza dei processi organizzativi. Serve documentare nel modo meno intrusivo possibile. Fra le cose più importanti che fa la documentazione è fornire una misura sull'avanzamento del progetto (Piano di progetto), che fornisce dei \textbf{consuntivi} (stato fotografato) e \textbf{preventivi} (stime). I consuntivi sono finali se siamo alla fine del progetto, o parziali se siamo in corso.\\
+Documentare serve per dominare la complessità dei processi produttivi, attenuare la volatilità dei requisiti, facilitare il controllo di avanzamento.\\
 
-Misureremo le cose sulle quali possiamo e vogliamo fissare degli obiettivi di miglioramento. Misurazione per obiettivi, "ad hoc". Il responsabile di progetto deve avere un ``\textit{cruscotto}'' con gli indicatori delle metriche che utilizziamo, e questi indicatori devono essere aggiornati. Vogliamo inoltre che il responsabile spenda il meno possibile per far questo devo documentare tutte le attività di pianificazione, gestione, sviluppo, verifica e validazione. Il piano ci dà degli obiettivi sui tempi e costi, le norme sono invece gli strumenti e le procedure che uso per rendere il piano fattibile. Il primo e più importante documento da realizzare (interno) sono le \textbf{norme di progetto}, che cresceranno nel tempo. Un altro documento importante è la specifica software, che è la descrizione ad alto livello del sistema.\\
+Misureremo le cose sulle quali possiamo e vogliamo fissare degli obiettivi di miglioramento. Misurazione per obiettivi, "ad hoc". Il responsabile di progetto deve avere un ``\textit{cruscotto}'' con gli indicatori delle metriche che utilizziamo, e questi indicatori devono essere aggiornati. Vogliamo inoltre che il responsabile spenda il meno possibile, per far questo devo documentare tutte le attività di pianificazione, gestione, sviluppo, verifica e validazione. Il piano ci dà degli obiettivi sui tempi e costi, le norme sono invece gli strumenti e le procedure che uso per rendere il piano fattibile. Il primo e più importante documento da realizzare (interno) sono le \textbf{norme di progetto}, che cresceranno nel tempo. Un altro documento importante è la specifica software, che è la descrizione ad alto livello del sistema.\\
 Ogni architettura sw ha molte viste:
 
 \begin{itemize}
@@ -31,7 +32,7 @@ L'architettura va descritta in due documenti distinti:
 \begin{center}
 \includegraphics[width=0.4\columnwidth]{img1}
 \end{center}
-
+\texttt{Tutto ciò che facciamo in discesa implica ciò che faremo in salita, e tutto ciò che facciamo in salita motiva quello che sta in discesa.} \\
 Per la documentazione si procede in modo \textbf{sequenziale}. In questo modo si suddividono i moduli grandi, in modo da agevolare i programmatori, i quali produrranno tanti moduli e li integreranno tra loro dopo la validazione. Dentro il repository si devono caricare moduli già verificati in modo automatico e/o manuale (preferibilmente automatico perché la verifica manuale costa).\\
 La progettazione di dettaglio fissa unità, fissa ciò che troveremo nel \textit{ramo ascendente}. Quando ho unità buone le posso integrare (test di integrazione). Quando tutte le parti sono messe insieme allora posso fare un test di sistema. Nel percorso discendente il lavoro che riguarda la qualità deve includere specifiche progressive delle verifiche che farò per la produzione.\\
 
@@ -45,10 +46,7 @@ Stadi di preparazione dei documenti:
 
 \end{itemize}
 
-Le transizioni tra uno stato e l'altro hanno l'etichetta di "\textit{documento approvato}".\\
-\textbf{NB} \textit{Tutto ciò che facciamo in discesa implica ciò che faremo in salita, e tutto ciò che facciamo in salita motiva quello che sta in discesa.} \\
-
-Il \textbf{tracciamento dei requisiti}  fissa la relazione tra i prodotti del processo di sviluppo. Può essere fatto:
+Il \textbf{tracciamento dei requisiti}  fissa la relazione tra i prodotti del processo di sviluppo, tramite matrici di tracciabilità. Può essere fatto:
 
 \begin{itemize}
 
@@ -62,25 +60,5 @@ Il \textbf{tracciamento dei requisiti}  fissa la relazione tra i prodotti del pr
 Il tracciamento deve essere assicurato ed automatizzato il più possibile. Dobbiamo avere \textbf{evidenza di copertura}. E' un lavoro potenzialmente oneroso e non può essere fatto a mano. I requisiti andranno identificati attraverso codici che li renderanno \textbf{univoci}. Un codice che definisca di cosa stiamo parlando (es. RU). Poi dovrò numerarli in modo gerarchico, in cui c'è uno spazio e un ambito. Non un numero in modo sequenziale ma raggruppato attorno a \textbf{categorie}. Non devo avere necessariamente solo numeri ma posso avere anche lettere.\\
 
 \textbf{Manuale utente:} deve essere adatto alle caratteristiche dell'utente e alle caratteristiche dell'interfaccia utente. Un manuale serve come informazione supplementare. Si usa uno stile molto succinto e sintetico, non narrativo. \\
-\textbf{Tipi di manuali}:
-
-\includegraphics[width=0.5\columnwidth]{img2} % Example image
-
-
-Stile di scrittura:
-
-\begin{itemize}
-
-	\item Forma attiva invece che passiva;
-	\item Correttezza grammaticale e tipografica;
-	\item Frasi brevi e intorno a un solo fatto;
-	\item Usare liste piuttosto che frasi;
-	\item Paragrafi brevi, fatti di poche frasi;
-	\item Stile non verboso;
-	\item Terminologia precisa (glossario);
-	\item Usare più punti di vista per descrizioni complesse;
-	\item Usare sezioni e sottosezioni titolate.
-
-\end{itemize}
 
 \end{document}
