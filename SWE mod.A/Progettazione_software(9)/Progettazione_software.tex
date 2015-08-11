@@ -6,12 +6,15 @@
 
 Progettare prima di produrre. Si deve avere un approccio industriale con un metodo ingegneristico, ossia si deve perseguire la \textbf{correttezza per costruzione} e non la correttezza per correzione.
 
-Bisogna cercare di ridurre al minimo lo sforzo della verifica, altrimenti pago un costo doppio. Per cercare di mitigare la verifica uso il principio di riduzione della complessità. La prima cosa che devo fare in un progetto sw è spezzare i problemi in parti più piccole per poterle governare insieme (\textit{divide et impera}).
+Bisogna cercare di ridurre al minimo lo sforzo della verifica, altrimenti pago un costo doppio. Per cercare di mitigare la verifica uso il principio di riduzione della complessità. Progettare per:
+\begin{enumerate}
+	\item Governare la complessità del prodotto;
+	\item Organizzare e ripartire le responsabilità di realizzazione;
+	\item Produrre in economia (efficienza);
+	\item Garantire controllo di qualità (efficacia);
+\end{enumerate}
 
-\includegraphics[width=0.5\columnwidth]{img1} % Example image
-
-
-C'è un'apertura molto grande fatta per frazionamento (\textit{approccio investigativo}) tipico dell'analista. Tutto non è necessariamente esplicito. Il lavoro del progettista è l'esatto opposto, deve riportare a sintesi i requisiti spezzettati e proporre una delle possibili soluzioni al problema, argomentando il valore di quella soluzione. L'analista ha fatto un buon lavoro se i requisiti sono tutti \textbf{tracciabili} e \textbf{verificabili}.\\
+L'approccio dell'analista è detto \textit{approccio investigativo}. Tutto non è necessariamente esplicito. Il lavoro del progettista è l'esatto opposto, deve riportare a sintesi i requisiti spezzettati e proporre una delle possibili soluzioni al problema, argomentando il valore di quella soluzione. L'analista ha fatto un buon lavoro se i requisiti sono tutti \textbf{tracciabili} e \textbf{verificabili}.\\
 Dijkstra afferma che per soddisfare i nostri bisogni:
 
 \begin{itemize}
@@ -59,10 +62,10 @@ Assunto di aver capito  questo, cerchiamo quali sono le qualità da perseguire i
 	\item \textbf{Disponibilità:} necessita di poco o nullo tempo di manutenzione \textit{fuori linea};
 	\item \textbf{Sicurezza rispetto a intrusioni};
 	\item \textbf{Sicurezza rispetto al funzionamento};
-	\item \textbf{Semplicità:} ogni parte contiene il necessario e niente di \textit{superfluo}, utilizzo il principio di \textit{Ockham}, elimino tutto quello che è superfluo;
-	\item \textbf{Incapsulamento:} (information hiding), nascondo il dettaglio, mostro solo il necessario, in oltre i cresce anche la manutenibilità;
-	\item \textbf{Coesione:} le parti che stanno insieme hanno gli stessi obiettivi;
-	\item \textbf{Basso accoppiamento:} una modifica ha impatto minimo con gli altri. Le modifiche locali non devono avere effetto sul globale, questo è misurabile ed e composto da due valori, utilità e bisogno.
+	\item \textbf{Semplicità:} ogni parte contiene il necessario e niente di \textit{superfluo}, utilizzo il principio di \textit{Occam}, elimino tutto quello che è superfluo;
+	\item \textbf{Incapsulamento:} (information hiding), nascondo il dettaglio, mostro solo il necessario, in oltre i cresce anche la manutenibilità. Le componenti sono \textit{Black box}, i clienti conoscono solamente l'interfaccia mentre la loro specifica nasconde gli algoritmi e le strutture dati usati all'interno;
+	\item \textbf{Coesione:} le parti che stanno insieme hanno gli stessi obiettivi, questa aiuta sia a decomporre che a mettere un limite inferiore alla decomposizione. Maggiore manutenibilità e riusabilità, minore interdipendenza, maggiore comprensione dell'architettura;
+	\item \textbf{Basso accoppiamento:} una modifica ha impatto minimo con gli altri. Le modifiche locali non devono avere effetto sul globale, questo è misurabile ed e composto da due valori, utilità e bisogno. Per calcolarlo si usa la metrica fan-in, fan-out, la prima da massimizzare e la seconda da minimizzare.
 
 \end{itemize}
 
@@ -77,11 +80,10 @@ I  pattern architetturali possono essere molti:
 	\item Architettura produttore-consumatore;
 	\item Architettura cliente-servente, ci sono due sottovarianti, con \textit{fat client} e con \textit{thin client};
 	\item Architettura \textit{peer-to-peer}, interconnessione di scambio senza server di mezzo.
-	\item Architettura di relazione, MVC, il \textbf{Model} incorpora il modello dei dati e le operazioni su di essi, la \textbf{View} incorpora la logica di presentazione, riceve in input e mostra in output l'esito delle azioni svolte dal controller sul model, \textbf{Controller} incorpora la logica di controllo del sistema;\\
-	\includegraphics[width=0.5\columnwidth]{img2}
+	\item Architettura di relazione, MVC, il \textbf{Model} incorpora il modello dei dati e le operazioni su di essi, la \textbf{View} incorpora la logica di presentazione, riceve in input e mostra in output l'esito delle azioni svolte dal controller sul model, \textbf{Controller} incorpora la logica di controllo del sistema;
 \end{itemize}
 
-Per componente si intende un elemento dell'architettura con delle interfacce chiare e formate. Relazioni tra più componenti espresse con delle frecce. Una \textbf{parte} è un'interfaccia esposta da una componente architetturale. Un \textbf{connettore} è una connessione tra più parti (in UML si chiama \textit{associazione}). E' importante capire che l'architettura dev'essere valutata per la sua \textbf{qualità}. Cercheremo metodi utili e ambienti di progettazione che questi metodi importano. Questo perchè perseguiamo \textit{qualità by construction}. Vogliamo che la \textbf{baseline} sia pulita e quindi bisogna verificare che l'architettura lo sia. La progettazione la distingueremo in due fasi (lassi di tempo contigui e continui):
+E' importante capire che l'architettura dev'essere valutata per la sua \textbf{qualità}. Cercheremo metodi utili e ambienti di progettazione che questi metodi importano. Questo perchè perseguiamo \textit{qualità by construction}. Vogliamo che la \textbf{baseline} sia pulita e quindi bisogna verificare che l'architettura lo sia. La progettazione la distingueremo in due fasi (lassi di tempo contigui e continui):
 
 \begin{itemize}
 
@@ -89,9 +91,6 @@ Per componente si intende un elemento dell'architettura con delle interfacce chi
 	\item una di \textbf{dettaglio} in cui riempiamo i buchi per agevolare il lavoro del programmatore. Definizione delle unità realizzative \textbf{moduli}.In questa fase in oltre si assegnano le attività ai componenti, si produce la documentazione necessaria perchè la programmazione possa procedere in modo più disciplinato e certo possibile.
 
 \end{itemize}
-
-
-Per descrivere l'architettura serve un \textbf{documento}, per produrre questo possiamo riferirci a degli standard procedurali, i quali sono però troppo rigidi. Si è capito che non è utile imporre procedure. Non è formativo imporre strutture di documenti, ma produrre processi. A noi interessa chiederci che cosa dobbiamo raccontare rispetto alle attese del committente. I documenti non devono avere una struttura standard.\\
 
 \textbf{Stati di processo} per SEMAT:
 
