@@ -7,12 +7,7 @@
 
 \begin{itemize}
 
-	\item \textbf{Verifica:} "ho fatto il sistema nel modo giusto", accerta che l'esecuzione delle attività di processi svolti nella fase in esame non abbia introdotto errori nel prodotto;
-	\item \textbf{Validazione:} "ho fatto il sistema giusto", accerta che il prodotto realizzato sia conforme alle attese.
-
-\end{itemize}
-
-La \textit{software verification} ricerca la completezza e la correttezza del software e tratta ciò che lo supporta. Consente di valutare di conseguenza che il sw sia validato. La verifica è a supporto della validazione e la validazione è l'ultima cosa che faccio in un progetto. La verifica è un attività che svolgo durante \textbf{tutto lo sviluppo} fino all'ultimo istante dove farò validazione, che servirà a dire che ciò che ho fatto è la cosa giusta. La verifica va fatta per impedire che la risposta finale non sia sbagliata. Devo garantire tre cose importanti:
+	\item \textbf{Verifica:} "ho fatto il sistema nel modo giusto", accerta che l'esecuzione delle attività di processi svolti nella fase in esame non abbia introdotto errori nel prodotto;La \textit{software verification} ricerca la completezza e la correttezza del software e tratta ciò che lo supporta. Consente di valutare di conseguenza che il sw sia validato. La verifica è a supporto della validazione e la validazione è l'ultima cosa che faccio in un progetto. La verifica è un attività che svolgo durante \textbf{tutto lo sviluppo} fino all'ultimo istante dove farò validazione, che servirà a dire che ciò che ho fatto è la cosa giusta. La verifica va fatta per impedire che la risposta finale non sia sbagliata. Devo garantire tre cose importanti:
 
 \begin{itemize}
 
@@ -22,7 +17,10 @@ La \textit{software verification} ricerca la completezza e la correttezza del so
 
 \end{itemize}
 
-Sono tre caratteristiche di cui devo accertare l'esistenza su tutti i prodotti parziali dello sviluppo. Il verificatore impara le norme e dice che quello che è stato fornito è fatto come richiesto. Non corregge nè rifà il lavoro ma controlla solo che tutto rispetti le tre caratteristiche. La validazione conseguentemente è una conferma \textbf{by examination}, mostra copertura dei requisiti (utente e sw).
+Sono tre caratteristiche di cui devo accertare l'esistenza su tutti i prodotti parziali dello sviluppo. Il verificatore impara le norme e dice che quello che è stato fornito è fatto come richiesto. Non corregge nè rifà il lavoro ma controlla solo che tutto rispetti le tre caratteristiche. 
+	\item \textbf{Validazione:} "ho fatto il sistema giusto", accerta che il prodotto realizzato sia conforme alle attese.La validazione conseguentemente è una conferma \textbf{by examination}, mostra copertura dei requisiti (utente e sw).
+
+\end{itemize}
 
 Per il verificatore ho due forme di \textbf{analisi}:
 
@@ -40,7 +38,7 @@ Per il verificatore ho due forme di \textbf{analisi}:
 					\item \textbf{Logger:} componente non intrusiva di registrazione dei dati di esecuzione per l'analisi dei risultati. Ogni tanto deve lasciare traccia del suo esito;	
 	
 				\end{itemize}
-	\		item \textbf{Unità:} può essere anche un aggregato di procedure. La più piccola unità sw che è conveniente verificare singolarmente. Un \textit{modulo} è parte dell'unità, un \textit{componente} integra più unità.
+			\item \textbf{Unità:} può essere anche un aggregato di procedure. La più piccola unità sw che è conveniente verificare singolarmente. Un \textit{modulo} è parte dell'unità, un \textit{componente} integra più unità.
 
 		\end{itemize}
 
@@ -106,17 +104,12 @@ Tipi di analisi statica:
 	\item \textbf{Codice oggetto:} assicurarsi che il codice oggetto sia una traduzione esatta del codice sorgente, che non ci siano errori o omissioni introdotte dal compilatore.
 \end{enumerate}
 La verifica solo retrospettiva \textit{(a valle dello sviluppo)} è spesso inadeguata.\\
-\includegraphics[width=0.5\columnwidth]{img5} % Example image
 
 Eseguire cicli revisione, verifica dopo ogni rilevazione d'errore è troppo oneroso, meglio effettuare analisi statiche durante la codifica. Si deve cercare di avere delle linee guida per la codifica del codice come prediligere o proibire l'uso di particolari costrutti, \textit{separare le interfacce dall'implementazione, massimizzare l'implementazione, massimizzare l'incapsulazione, usare tipi specializzati per specificare i dati}.
 
 \subsection{Analisi Dinamica}
 
 Analisi dinamica=test, la prova che consiste nella verifica dinamica del comportamento del programma, queste prove si faranno su un insieme finito di casi selezionati nel dominio delle esecuzioni possibili.\\
-
-classificazione delle problematiche:
-
-\includegraphics[width=0.5\columnwidth]{img6} % Example image
 
 Dentro la classificazione ci deve essere:
 
@@ -142,8 +135,6 @@ La strategia di prova va bene bilanciata tra la \textit{quantità minima} di cas
 	\item \textbf{Tesi di Dijksta:} I test su di un programma possono rilevare la presenza di malfunzionamenti, ma non dimostrarne l'assenza;
 \end{itemize}
 
-\includegraphics[width=0.5\columnwidth]{img7} % Example image
-
 Una valida strategia di assemblaggio delle parti è quella incrementale, in quanto i difetti rilevati da un test molto probabilmente saranno relativi all'ultima parte integrata, cercare anche di assemblare prima i produttori dei consumatori così da avere un flusso di controllo e dei dati corretti per i secondi.\\
 Una volta adottata questa strategia i metodi per svolgerla sono due:
 \begin{itemize}
@@ -157,7 +148,6 @@ Una volta adottata questa strategia i metodi per svolgerla sono due:
 \textbf{Test funzionale:} (black-box) da solo non può accertare correttezza e completezza della logica interna dell'unità, ciascun insieme di dati in ingresso producono un dato comportamento funzionale che costituisce un caso di prova.\\
 \textbf{Test strutturale:} (white-box) verifica la logica interna del codice dell'unità cercando massima copertura, le prove devono essere progettate per attivare ogni cammino di esecuzione all'interno del modulo, ciascun insieme di dati che attiva un percorso costituisce un caso di prova.
 	\item \textbf{Test di integrazione:} si applica alle componenti specificate nella progettazione architetturale, si selezionano le funzionalità da integrare, si identificano le componenti che le svolgono e si ordina tali componenti per numero di dipendenze crescenti. Problemi rilevati in questo tipo di test sono dovuti a difetti di progettazione o insufficiente qualità dei test di qualità. La quantità è stabilita da quanti ne servono per accertare che tutti i dati scambiati attraverso un'interfaccia siano conformi alla specifica, e che tutti i flussi di controllo previsti in specifica siano stati realizzati e provati.
-	\includegraphics[width=0.5\columnwidth]{img8}
 	\item \textbf{Test di sistema:} verificano il comportamento dinamico del sistema completo rispetto ai requisiti software, iniziano con il completamento dei test di integrazione.
 	\item \textbf{Test di regressione:} possono essere molto onerosi, si accertano che le modifiche introdotte non comportino errori nel sistema, ripetizione selettiva di TS o TI.
 	\item \textbf{Test di accettazione:} accertano il soddisfacimento dei requisiti utente.
